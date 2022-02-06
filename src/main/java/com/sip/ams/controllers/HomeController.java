@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 	@RequestMapping("/information")//url
 	public String info()
-	{system.out.println("okkkk")
+	{  System.out.println("okkkk")
 		return"home/info";
 	}
 
 	
 	@RequestMapping("/affichage")
 	public String affiche()
-	{
+	{    System.out.println("methode affichage")
 		return"home/affichage";
 	}
 }
