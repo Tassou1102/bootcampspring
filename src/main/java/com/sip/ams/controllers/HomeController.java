@@ -4,11 +4,19 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 
 public class HomeController {
+	@PostMapping("/result")
+	@ResponseBody
+	public String resultat(@RequestParam("nom") String n, @RequestParam("nom") String e)
+	{
+	return "vous avez taper deux fois :"+n+"un email "+e;
+}
 	@RequestMapping("/information")//url
 	public String info(Model model)
 	
